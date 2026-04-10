@@ -654,5 +654,15 @@ function getDemoTasks() {
 <footer class="app-footer">
   ✿ мастерская «Вересковые страницы»
 </footer>
+<audio id="clickSound" src="sounds/click.mp3" preload="auto"></audio>
+  <script>
+  const sound = document.getElementById('clickSound');
+
+  document.addEventListener('click', () => {
+    if (!sound) return;
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+  });
+</script>
 </body>
 </html>
